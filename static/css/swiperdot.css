@@ -1,0 +1,12 @@
+uni-swiper .uni-swiper-dot {
+	   width: 10px;
+	   height: 10px;
+	  }
+	  uni-swiper .uni-swiper-dot-active {
+	 background-color: #5555ff;
+	 border-radius: 5px;
+	  }
+	  
+	  uni-swiper .uni-swiper-dots-horizontal{
+		  bottom: 100upx;
+	  }

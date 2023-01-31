@@ -1,0 +1,7 @@
+{
+  "name": "bindAlias",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-push": {}
+  }
+}

@@ -1,0 +1,97 @@
+.section_2 {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  position: fixed;
+  width: 640rpx;
+  height: 696rpx;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.group_2 {
+  width: 399rpx;
+  height: 282rpx;
+  margin: 34rpx 0 0 207rpx;
+}
+
+.group_3 {
+  background-color: rgba(0, 155, 249, 0.1);
+  border-radius: 50%;
+  width: 255rpx;
+  height: 255rpx;
+  margin-top: 27rpx;
+}
+
+.icon_1 {
+  width: 44rpx;
+  height: 44rpx;
+  background: url('@/static/images/mine/delete.png')
+    100% no-repeat;
+  background-size: 100% 100%;
+}
+
+.text-group_1 {
+  width: 476rpx;
+  height: 123rpx;
+  margin: 40rpx 0 0 82rpx;
+ 
+}
+
+.text_1 {
+  width: 168rpx;
+  height: 59rpx;
+  overflow-wrap: break-word;
+  color: rgba(46, 51, 78, 1);
+  font-size: 42rpx;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 59rpx;
+  margin-left: 154rpx;
+}
+
+.text_2 {
+  width: 476rpx;
+  height: 100rpx;
+  color: rgba(158, 163, 187, 1);
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium;
+  text-align: center;
+  line-height: 40rpx;
+  margin-top: 24rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.button_1 {
+  background-color: rgba(0, 155, 249, 1);
+  border-radius: 100px;
+  height: 90rpx;
+  width: 576rpx;
+  margin: 76rpx 0 46rpx 32rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 32rpx;
+  font-family: AlibabaPuHuiTiM;
+}
+
+.text_3 {
+  width: 126rpx;
+  height: 44rpx;
+  overflow-wrap: break-word;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 44rpx;
+  margin: 23rpx 0 0 225rpx;
+}
+
+.group_4 {
+  background: url('@/static/images/mine/pop.png');
+  background-size: 100% 100%;
+  position: absolute;
+  left: 152rpx;
+  top: 34rpx;
+  width: 337rpx;
+  height: 297rpx;
+}

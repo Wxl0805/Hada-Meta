@@ -1,0 +1,14 @@
+{
+  "id": "dumenghanfeng-pictureUpload",
+  "name": "基于uniapp封装的图片上传组件-pictureUpload",
+  "version": "1.0",
+  "description": "改插件为基于 uniapp 封装的图片上传组件,包含正常的图片上传,预览,删除功能,适用于.vue 文件,如要在.nvue 中使用需自己进行排版",
+  "keywords": [
+    "便捷"
+  ],
+  "dependencies": {
+    "echarts": "^5.3.3",
+    "vue-i18n": "^9.2.0",
+    "weex-vue-render": "^0.10.3"
+  }
+}

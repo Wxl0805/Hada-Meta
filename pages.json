@@ -1,0 +1,910 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    //启动页面
+    {
+      "path": "pages/index/Loginstart",
+      "style": {
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    //引导页面
+    {
+      "path": "pages/index/guide",
+      "style": {
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    //邮箱验证码登录(默认登录页面)
+    {
+      "path": "pages/index/VerificationLogin",
+      "style": {
+        "disableScroll": true,
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    // Hada Meta服务协议
+    {
+      "path": "pages/index/HadaMetaProtocal",
+      "style": {
+        "app-plus": {
+          "bounce": "none"
+        },
+        "navigationBarTitleText": "%VerificationLogin.agree-agreement%"
+      }
+    },
+    // Hada Meta隐私政策
+    {
+      "path": "pages/index/HadaMetaPolicy",
+      "style": {
+        "app-plus": {
+          "bounce": "none"
+        },
+        "navigationBarTitleText": "%VerificationLogin.agree-policy%"
+      }
+    },
+    // Hada Meta免责声明
+    {
+      "path": "pages/index/HadaMetaStatement",
+      "style": {
+        "app-plus": {
+          "bounce": "none"
+        },
+        "navigationBarTitleText": "%VerificationLogin.agree-disclaimer%"
+      }
+    },
+    //国际区号
+    {
+      "path": "pages/index/country-code",
+      "style": {
+        "app-plus": {
+          "bounce": "none"
+        },
+        "navigationBarTitleText": "%common.choosecountry%"
+      }
+    },
+    //注册页面
+    {
+      "path": "pages/index/SignIn",
+      "style": {
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    //验证码页面
+    {
+      "path": "pages/index/Validate",
+      "style": {
+        "disableScroll": true,
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    //设置账号信息页面
+    {
+      "path": "pages/index/SignCount",
+      "style": {
+        "disableScroll": true,
+        "app-plus": {
+          "bounce": "none"
+        },
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    // 设备主页面路由
+    {
+      "path": "pages/equipment/equipmentMenu",
+      "style": {
+        "app-plus": {
+          "bounce": "none"
+        },
+        "navigationStyle": "custom"
+        // "app-plus": {"titleNView": true}
+      }
+    },
+    //我的-主页面
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //弹窗
+    {
+      "path": "pages/mine/modal",
+      "style": {
+        "navigationStyle": "custom",
+        "app-plus": {
+			"titleNView": false,
+          "background": "transparent",
+          "popGesture": "none",
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-修改密码
+    {
+      "path": "pages/mine/editPassword",
+      "style": {
+        "navigationBarTitleText": "%mine.editpassword%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-提现管理
+    {
+      "path": "pages/mine/WithdrawManage",
+      "style": {
+        // "navigationBarTitleText": "提现管理",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-提现管理-提现管理
+    {
+      "path": "pages/mine/WithDraw",
+      "style": {
+        // "navigationBarTitleText": "提现管理",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-提现管理-提现记录
+    {
+      "path": "pages/mine/WithDrawRecord",
+      "style": {
+        // "navigationBarTitleText": "提现记录",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-提现管理-提现记录-提现详情
+    {
+      "path": "pages/mine/WithdrawInfo",
+      "style": {
+        // "navigationBarTitleText": "提现详情",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-设置
+    {
+      "path": "pages/mine/set",
+      "style": {
+        "navigationBarTitleText": "%common.set%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-设置-语言设置
+    {
+      "path": "pages/mine/lang",
+      "style": {
+        "navigationBarTitleText": "%mine.language%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-意见反馈
+    {
+      "path": "pages/mine/option",
+      "style": {
+        "navigationBarTitleText": "%mine-option%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    //我的-主页面-关于应用
+    {
+      "path": "pages/mine/aboutAPP/aboutAPP",
+      "style": {
+        "navigationBarTitleText": "%mine-aboutapp%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-关于应用-更新动态
+    {
+      "path": "pages/mine/aboutAPP/uploadInfo",
+      "style": {
+        "navigationBarTitleText": "%mine-aboutapp-gengxin%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-关于应用-服务协议
+    {
+      "path": "pages/mine/aboutAPP/serviceAgreement",
+      "style": {
+        "navigationBarTitleText": "%mine-aboutapp-fuwu%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-修改密码-原密码修改
+    {
+      "path": "pages/mine/oldPassword",
+      "style": {
+        "navigationBarTitleText": "%mine.oldpassword%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-修改密码-手机号验证码修改
+    {
+      "path": "pages/mine/telValidate",
+      "style": {
+        "navigationBarTitleText": "%common.tel-vericode-editpassword%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-修改密码-邮箱验证码修改
+    {
+      "path": "pages/mine/emailValidate",
+      "style": {
+        "navigationBarTitleText": "%mine-editpassword-emailvericode%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-钱包管理
+    {
+      "path": "pages/mine/WalletManage",
+      "style": {
+        "navigationBarTitleText": "钱包管理",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-钱包管理-新增钱包
+    {
+      "path": "pages/mine/EditWallet",
+      "style": {
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //我的-主页面-子账户管理
+    {
+      "path": "pages/mine/subAccount",
+      "style": {
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //我的-主页面-子账户管理-新增子账户
+    {
+      "path": "pages/mine/AddSubAccount",
+      "style": {
+        "navigationBarTitleText": "新增子账户",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    //我的-主页面-子账户管理-编辑子账户
+    {
+      "path": "pages/mine/editAccount",
+      "style": {
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    // 设备-扫描页面
+    {
+      "path": "pages/mine/plusScan/index",
+      "style": {
+        "app-plus": {
+          //去掉顶部的title
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    //我的-主页面-子账户管理-编辑子账户-添加设备-输入设备编码
+    {
+      "path": "pages/mine/BindProduct",
+      "style": {
+        "navigationBarTitleText": "绑定设备",
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+
+    // 我的-主页面-子账户管理-编辑子账户-添加设备-扫码添加
+    {
+      "path": "pages/mine/ScanAdd",
+      "style": {
+        "navigationBarTitleText": "扫描设备",
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //我的-主页面-个人资料
+    {
+      "path": "pages/mine/userDate",
+      "style": {
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //我的-主页面-个人资料-修改性别
+    {
+      "path": "pages/mine/sexSelect",
+      "style": {
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //我的-主页面-个人资料-绑定手机号
+    {
+      "path": "pages/mine/telBind",
+      "style": {
+        "disableScroll": true,
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //我的-主页面-个人资料-更改手机号
+    {
+      "path": "pages/mine/ChangeTel",
+      "style": {
+        "disableScroll": true,
+        "navigationBarTitleText": "%mine.change-tel%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    //我的-主页面-个人资料-绑定邮箱
+    {
+      "path": "pages/mine/emailBind",
+      "style": {
+        "disableScroll": true,
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    //我的-主页面-个人资料-更改邮箱
+    {
+      "path": "pages/mine/ChangeEmail",
+      "style": {
+        "disableScroll": true,
+        "navigationBarTitleText": "%mine.change-email%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    //我的-主页面-个人资料-修改用户名
+    {
+      "path": "pages/mine/ChangeUsername",
+      "style": {
+        "disableScroll": true,
+        "navigationBarTitleText": "%mine.change-username%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // 首页-消息页面
+    {
+      "path": "pages/message/messages",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.title%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页
+    {
+      "path": "pages/home/index",
+      "style": {
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "navigationStyle": "custom",
+        "scrollIndicator": "none"
+      }
+    },
+    // 首页-消息-奖励结算通知页面
+    {
+      "path": "pages/message/bonusMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.award-settlement-notice%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-激励结算通知页面
+    {
+      "path": "pages/message/inspiredMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.incentive-settlement-notice%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-拓展客户通知页面
+    {
+      "path": "pages/message/inviteMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.expanding-customer-notice%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-客户被拓展通知页面
+    {
+      "path": "pages/message/beInvitedMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.authentication-success-notice%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-发展客户投资提交通知页面
+    {
+      "path": "pages/message/CustomerSubmitInvestmentMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.customer-submit-investment-notice%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-投资份额提交成功页面
+    {
+      "path": "pages/message/submitSuccessMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.investment-submit%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-投资份额审核通过页面
+    {
+      "path": "pages/message/auditSuccessMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.investment-success%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-投资份额审核失败页面
+    {
+      "path": "pages/message/auditFailMsg",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.investment-fail%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-消息-公告页面
+    {
+      "path": "pages/message/announcement",
+      "style": {
+        "navigationBarTitleText": "%Home.Message.announcement%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-新闻资讯阅读页面
+    {
+      "path": "pages/news/topNews",
+      "style": {
+        "navigationBarTitleText": "%Home.HotNews.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // 首页-新闻资讯阅读列表页面
+    {
+      "path": "pages/news/topNewsList",
+      "style": {
+        "navigationBarTitleText": "%Home.HotNewsList.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // 首页-ETH理财资讯阅读页面
+    {
+      "path": "pages/news/ETHfinancialNews",
+      "style": {
+        "navigationStyle": "custom",
+        "scrollIndicator": "none",
+        "bounce": "none",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页-Aleo理财资讯阅读页面
+    {
+      "path": "pages/news/AleoFinancialNews",
+      "style": {
+        "navigationStyle": "custom",
+        "scrollIndicator": "none",
+        "bounce": "none",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    // Aleo新增投资
+    {
+      "path": "pages/news/AddAleoFinancial",
+      "style": {
+        "disableSwipeBack": true,
+        "navigationBarTitleText": "%add.title%",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // Aleo新增投资-扫码
+    {
+      "path": "pages/news/scan",
+      "style": {
+        "app-plus": {
+          //去掉顶部的title
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    // Aleo我的认证
+    {
+      "path": "pages/news/identity",
+      "style": {
+        "disableSwipeBack": true,
+        "navigationBarTitleText": "%common.identity%",
+        "disableScroll": true,
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 首页轮播图-电报群路由
+    {
+      "path": "pages/telegram/addTelegram",
+      "style": {
+        "navigationBarTitleText": "%Home.Swiper.telegram.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // 首页轮播图-设备信息路由
+    {
+      "path": "pages/equipment/equipments",
+      "style": {
+        "navigationBarTitleText": "%Home.Swiper.equipment.topTabbar-title1%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // 首页轮播图-设备信息-查看更多路由
+    {
+      "path": "pages/equipment/equipmentDetails",
+      "style": {
+        "navigationBarTitleText": "%Home.Swiper.equipment.topTabbar-title2%",
+        "app-plus": {
+          "titleNView": true,
+          "bounce": "none"
+        }
+      }
+    },
+    // 设备-绑定设备路由
+    {
+      "path": "pages/equipment/bindEquipment",
+      "style": {
+        "navigationBarTitleText": "绑定设备",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // 设备-输入编码绑定设备页面路由
+    {
+      "path": "pages/equipment/inputBindInfo",
+      "style": {
+        "navigationStyle": "custom",
+        "app-plus": { "titleNView": false, "bounce": "none" }
+      }
+    },
+    // 设备-扫描页面
+    {
+      "path": "pages/plusScan/index",
+      "style": {
+        "app-plus": {
+          //去掉顶部的title
+          "titleNView": false,
+          "bounce": "none"
+        }
+      }
+    },
+    // 设备-子账户详情页面路由
+    {
+      "path": "pages/equipment/subAccount",
+      "style": {
+        "onReachBottomDistance": 1, // 距离底部 ? px 时触发
+        "app-plus": {
+          "bounce": "none",
+          "titleNView": false
+        },
+        "navigationStyle": "custom"
+      }
+    },
+    // 设备-子账户详情-设备详情页面路由
+    {
+      "path": "pages/equipment/subEquipmentInfo",
+      "style": {
+        "navigationBarTitleText": "设备详情",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // ETH收益-收益主页面路由
+    {
+      "path": "pages/income/ETHIncome/income",
+      "style": {
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "navigationStyle": "custom"
+      }
+    },
+    // Aleo收益-收益主页面路由
+    {
+      "path": "pages/income/AleoIncome/income",
+      "style": {
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "navigationStyle": "custom"
+      }
+    },
+    // ETH收益-子账户收益页面路由
+    {
+      "path": "pages/income/ETHIncome/subAccount",
+      "style": {
+        "app-plus": {
+			"titleNView": false,
+          "bounce": "none"
+        },
+        "navigationStyle": "custom"
+      }
+    },
+    // Aleo收益-投资记录页面路由
+    {
+      "path": "pages/income/AleoIncome/investmentRecord",
+      "style": {
+        "disableSwipeBack": true,
+        "navigationBarTitleText": "%Aleo.InvestmentRecord.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-奖励积分记录页面路由
+    {
+      "path": "pages/income/AleoIncome/bonusPointsRecord",
+      "style": {
+        "navigationBarTitleText": "%Aleo.BonusPointsRecord.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-激励积分记录页面路由
+    {
+      "path": "pages/income/AleoIncome/inspiredPointsRecord",
+      "style": {
+        "navigationBarTitleText": "%Aleo.InspiredPointsRecord.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-拓展客户列表页面路由
+    {
+      "path": "pages/income/AleoIncome/expandingCustomerList",
+      "style": {
+        "navigationBarTitleText": "%Aleo.ExpandingCustomerList.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-拓展客户详情页面路由
+    {
+      "path": "pages/income/AleoIncome/expandingCustomerDetail",
+      "style": {
+        "navigationBarTitleText": "%Aleo.ExpandingCustomerDetails.topTabbar-title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-邀请客户页面路由
+    {
+      "path": "pages/income/AleoIncome/inviteCustomers",
+      "style": {
+        // "navigationStyle": "custom",
+        "navigationBarTitleText": "%Aleo.InviteCustomers.title%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-Metaverse页面路由
+    {
+      "path": "pages/income/AleoIncome/inviteCustomersRecord",
+      "style": {
+        // "navigationBarTitleText": "%Aleo.Metaverse.topTabbar-title%",
+        "navigationStyle": "custom",
+		"bounce": "none",
+        "app-plus": { "titleNView": false,"bounce": "none" }
+      }
+    },
+    // Aleo收益-投资详情
+    {
+      "path": "pages/income/AleoIncome/InvestmentDetails",
+      "style": {
+        "navigationBarTitleText": "%common.touzidetail%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-兑换转出详情
+    {
+      "path": "pages/income/AleoIncome/exchangeOut",
+      "style": {
+        "navigationBarTitleText": "%common.exchangeOutDetail%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-他人代兑详情页面
+    {
+      "path": "pages/income/AleoIncome/otherExchangeDetail",
+      "style": {
+        "navigationBarTitleText": "%common.other-exchange%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-自主兑换详情页面
+    {
+      "path": "pages/income/AleoIncome/zizhuExchangeDetail",
+      "style": {
+        "navigationBarTitleText": "%common.exchange-mine%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+    // Aleo收益-兑换
+    {
+      "path": "pages/income/AleoIncome/exchange",
+      "style": {
+        "navigationBarTitleText": "%common.exchange%",
+        "app-plus": { "titleNView": true, "bounce": "none" }
+      }
+    },
+	// Aleo收益-产出详情
+	{
+	    "path": "pages/income/AleoIncome/outputDetails",
+	    "style": {
+	        // "navigationBarTitleText": "兑换详情",
+	        "app-plus": { "titleNView": false, "bounce": "none" }
+	    }
+	},
+	// Aleo收益-往期结算详情
+	{
+	    "path": "pages/income/AleoIncome/pastDetails",
+	    "style": {
+	        // "navigationBarTitleText": "往期结算详情",
+	        "app-plus": { "titleNView": false, "bounce": "none" }
+	    }
+	}
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F8F8F8",
+	"bounce": "none",
+    "app-plus": {
+      "bounce": "none"
+    }
+  },
+  // 底部导航栏设置
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#0079fe",
+    "borderStyle": "#F5F9FA",
+    "backgroundColor": "#ffffff",
+    "list": [
+      // 首页主页面路由
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/images/tabbar/homepage.png",
+        "selectedIconPath": "static/images/tabbar/homepageSelected.png",
+        "text": "%index.home%"
+      },
+      // 设备主页面路由
+      {
+        "pagePath": "pages/equipment/equipmentMenu",
+        "iconPath": "static/images/tabbar/equipment.png",
+        "selectedIconPath": "static/images/tabbar/equipmentSelected.png",
+        "text": "%index.equipment%",
+        "visible": false
+      },
+      //     // eth收益主页面路由
+      //     {
+      //       "pagePath": "pages/income/ETHIncome/income",
+      //       "iconPath": "static/images/tabbar/income.png",
+      //       "selectedIconPath": "static/images/tabbar/incomeSelected.png",
+      //       "text": "%index.income%",
+      // "visible": false
+      //     },
+      // aleo收益主页面路由
+      {
+        "pagePath": "pages/income/AleoIncome/income",
+        "iconPath": "static/images/tabbar/income.png",
+        "selectedIconPath": "static/images/tabbar/incomeSelected.png",
+        "text": "%index.income%",
+        "visible": true
+      },
+      // 我的主页面路由
+      {
+        "pagePath": "pages/mine/index",
+        "iconPath": "static/images/tabbar/user.png",
+        "selectedIconPath": "static/images/tabbar/userSelected.png",
+        "text": "%index.mine%"
+      }
+    ]
+  }
+}

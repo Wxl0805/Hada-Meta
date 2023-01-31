@@ -1,0 +1,154 @@
+.hm-news-card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.box {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #ffffff;
+  // width: 650rpx;
+  // height: 370rpx;
+  // border-radius: 20rpx;
+}
+
+.imgBox{
+	width: 517rpx;
+	height: 272rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20rpx;
+	.img {
+	  width: 517rpx;
+		border-radius: 4rpx;
+	  height: 272rpx;
+	}
+}
+.imgTop {
+  width: 66rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 12rpx;
+  top: 17rpx;
+}
+
+.title {
+  margin-top: 24rpx;
+  margin-left: 3rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+  max-width: 514rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #121212;
+  // line-height: 32rpx;
+}
+
+.submain {
+	display: flex;
+	flex-direction: row;
+	// align-items: center;
+	margin-top: 14rpx;
+	width: 278rpx;
+	height: 37rpx;
+	font-size: 26rpx;
+	font-family: PingFangSC-Regular, PingFang SC;
+	font-weight: 400;
+	color: #9EA3BB;
+	line-height: 37rpx;
+  
+	.author {
+	  margin-left: 3rpx;
+	  // width: 150rpx;
+	  height: 28rpx;
+	  white-space: nowrap;
+	}
+
+	.date {
+	  margin-left: 20rpx;
+	  // width: 146rpx;
+	  height: 28rpx;
+	  white-space: pre;
+	}
+}
+
+
+// 新闻概要css
+.summary {
+  display: block;
+  margin-top: 16rpx;
+  margin-left: 38rpx;
+  width: 354rpx;
+  height: 88rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 44rpx;
+  // letter-spacing: 0px;
+  white-space: pre-wrap;
+  color: #8f8e94;
+  font-family: Helvetica;
+  font-size: 28rpx;
+  font-weight: normal;
+}
+
+// 下方装饰线css
+.row_2 {
+  display: flex;
+  margin-top: 32rpx;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(239, 239, 244, 1);
+  width: 650rpx;
+  height: 8rpx;
+}
+
+// 评论和喜欢css
+.ft {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 28rpx;
+  margin-bottom: 28rpx;
+  padding-right: 48rpx;
+  padding-left: 40rpx;
+  width: 692rpx;
+}
+
+.comments {
+  width: 182rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  letter-spacing: 1.67px;
+  white-space: pre;
+  color: #8f8e94;
+  font-family: Helvetica;
+  font-size: 20rpx;
+  font-weight: normal;
+}
+
+.likes {
+  width: 126rpx;
+  height: 24rpx;
+  line-height: 24rpx;
+  letter-spacing: 1.67px;
+  white-space: pre;
+  color: #8f8e94;
+  font-family: Helvetica;
+  font-size: 20rpx;
+  font-weight: normal;
+}

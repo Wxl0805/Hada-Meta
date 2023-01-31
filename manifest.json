@@ -1,0 +1,226 @@
+{
+    "name" : "Hada Meta",
+    "appid" : "__UNI__A20F141",
+    "description" : "",
+    "versionName" : "2.1.9",
+    "versionCode" : 219,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "locales" : {
+            "en" : {
+                // 英文  
+                // "name": "HBuilder",  // 应用名称  
+                "ios" : {
+                    "privacyDescription" : {
+                        //iOS平台隐私访问描述信息  
+                        "NSPhotoLibraryUsageDescription" : "This permission is required when a user uploads a picture as a profile picture.",
+                        "NSPhotoLibraryAddUsageDescription" : "Users need to use this permission to save the image of the QR code.",
+                        "NSCameraUsageDescription" : "Users need this permission to take and upload pictures.",
+                        "NSMicrophoneUsageDescription" : "Users need this permission to take and upload pictures."
+                    }
+                }
+            },
+            "zh-CN" : {
+                // 中文（简体）
+                "ios" : {
+                    "privacyDescription" : {
+                        //iOS平台隐私访问描述信息  
+                        "NSPhotoLibraryUsageDescription" : "用户上传图片作为头像时需要使用此权限",
+                        "NSPhotoLibraryAddUsageDescription" : "用户保存二维码图片时需要使用此权限",
+                        "NSCameraUsageDescription" : "用户拍摄并上传图片时需要使用此权限",
+                        "NSMicrophoneUsageDescription" : "用户拍摄并上传图片时需要使用此权限"
+                    }
+                }
+            },
+            "zh-TW" : {
+                "ios" : {
+                    "privacyDescription" : {
+                        //iOS平台隐私访问描述信息  
+                        "NSPhotoLibraryUsageDescription" : "用戶上傳圖片作為頭像時需要使用此權限",
+                        "NSPhotoLibraryAddUsageDescription" : "用戶保存二維碼圖片時需要使用此權限",
+                        "NSCameraUsageDescription" : "用戶拍攝並上傳圖片時需要使用此權限",
+                        "NSMicrophoneUsageDescription" : "用戶拍攝並上傳圖片時需要使用此權限"
+                    }
+                }
+            },
+            "zh-HK" : {
+                "ios" : {
+                    "privacyDescription" : {
+                        //iOS平台隐私访问描述信息  
+                        "NSPhotoLibraryUsageDescription" : "用戶上傳圖片作為頭像時需要使用此權限",
+                        "NSPhotoLibraryAddUsageDescription" : "用戶保存二維碼圖片時需要使用此權限",
+                        "NSCameraUsageDescription" : "用戶拍攝並上傳圖片時需要使用此權限",
+                        "NSMicrophoneUsageDescription" : "用戶拍攝並上傳圖片時需要使用此權限"
+                    }
+                }
+            }
+        },
+        "usingComponents" : true,
+        "background" : "#f3f5f7", //背景色
+        "safearea" : {
+            // "background": "#000", //背景色
+            //安全区域配置，仅iOS平台生效
+            "bottom" : {
+                // 底部安全区域配置
+                "offset" : "none" // 底部安全区域偏移，"none"表示不空出安全区域，"auto"自动计算空出安全区域，默认值为"none"
+            }
+        },
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : false,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Share" : {},
+            "Push" : {}
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* 重力感应、横竖屏配置 */
+            "distribute" : {
+                "orientation" : [ "portrait-primary" ]
+            },
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.INSTALL_PACKAGES\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.REQUEST_INSTALL_PACKAGES\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                ],
+                "minSdkVersion" : 24,
+                "schemes" : "telegram"
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "urlschemewhitelist" : "telegram",
+                "dSYMs" : false,
+                "idfa" : false,
+                "capabilities" : {
+                    "entitlements" : {
+                        "com.apple.developer.associated-domains" : [ "applinks:static-6705aaeb-02bb-488d-a901-fb612e652c55.bspapp.com" ]
+                    }
+                },
+                "privacyDescription" : {
+                    "NSPhotoLibraryUsageDescription" : "用户上传图片作为头像时需要使用此权限",
+                    "NSPhotoLibraryAddUsageDescription" : "用户保存二维码图片时需要使用此权限",
+                    "NSCameraUsageDescription" : "用户拍摄并上传图片时需要使用此权限",
+                    "NSMicrophoneUsageDescription" : "用户拍摄并上传图片时需要使用此权限"
+                }
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {},
+                "push" : {
+                    "unipush" : {
+                        "version" : "2",
+                        "offline" : true,
+                        "hms" : {},
+                        "icons" : {
+                            "small" : {
+                                "hdpi" : "unpackage/res/icons/40x40.png"
+                            }
+                        }
+                    }
+                },
+                "oauth" : {},
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxcafda0a7f13e9519",
+                        "UniversalLinks" : "https://static-6705aaeb-02bb-488d-a901-fb612e652c55.bspapp.com/uni-universallinks/__UNI__A20F141/"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "androidStyle" : "common",
+                "iosStyle" : "common"
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            }
+        },
+        "nativePlugins" : {}
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    "networkTimeout" : {
+        "request" : 20000
+    },
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true,
+        "unipush" : {
+            "enable" : false
+        }
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "h5" : {
+        "unipush" : {
+            "enable" : false
+        }
+    },
+    "_spaceID" : "6705aaeb-02bb-488d-a901-fb612e652c55"
+}

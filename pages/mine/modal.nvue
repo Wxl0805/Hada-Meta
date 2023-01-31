@@ -1,0 +1,255 @@
+<template>
+	<view class="mask">
+
+		<view @click.stop="onClick" class="box" ref="box">
+
+			<view class="title" v-if="title != ''">
+				<text class="title-text">{{title}}</text>
+			</view>
+			
+			<scroll-view class="content" scroll-y="true" :style="contentView">
+				<text class="content-text" :style="contentStyle">{{content}}</text>
+			</scroll-view>
+
+			<view class="button">
+				<view v-if="showCancel" @click="buttonClick('cancel')" class="button-view button-cancel" hover-class="button-hover"
+				 :hover-start-time="0" hover-stay-time="30">
+					<text class="button-view-text" :style="cancelStyle">{{cancelTitle}}</text>
+				</view>
+				<view @click="buttonClick('confirm')" 
+				class="button-view button-confirm" :style="!showCancel ? confirmButton : ''"
+				hover-class="button-hover" :hover-start-time="0" hover-stay-time="30">
+					<text class="button-view-text" :style="confirmStyle">{{confirmTitle}}</text>
+				</view>
+			</view>
+
+		</view>
+
+	</view>
+</template>
+
+<script>
+	const animation = weex.requireModule('animation');
+	const dom = weex.requireModule('dom');
+
+	export default {
+		data() {
+			return {
+				title: '',
+				content: '',
+				contentColor: '',
+				buttons: [],
+				showCancel: true,
+				
+				contentView: {
+					height: 'auto'
+				},
+				contentStyle: {
+					color: '#7F7F7F'
+				},
+
+				cancelTitle: '取消',
+				cancelStyle: {
+					color: '#696969'
+				},
+
+				confirmTitle: '确定',
+				confirmStyle: {
+					color: '#387BB8'
+				},
+				confirmButton: {
+					'border-bottom-left-radius': '15rpx'
+				},
+
+				result: {
+					confirm: false,
+					cancel: false
+				}
+			}
+		},
+
+		onLoad() {
+			let modalParam = uni.getStorageSync('_systemShowModalParam');
+			uni.removeStorageSync('_systemShowModalParam');
+
+			this.title = modalParam.title;
+			this.content = modalParam.content;
+			this.contentColor = modalParam.contentColor;
+			this.buttons = modalParam.buttons;
+
+			if (this.title == '') {
+				this.contentStyle.color = '#191919';
+			}
+			if (modalParam.contentColor != '') {
+				this.contentStyle.color = modalParam.contentColor;
+			}
+
+			if (this.buttons.length == 1) {
+				this.showCancel = false;
+				this.confirmTitle = this.buttons[0].title;
+				this.confirmStyle.color = this.buttons[0].titleColor;
+			} else {
+				this.showCancel = true;
+				this.confirmTitle = this.buttons[1].title;
+				this.confirmStyle.color = this.buttons[1].titleColor;
+				this.cancelTitle = this.buttons[0].title;
+				this.cancelStyle.color = this.buttons[0].titleColor;
+			}
+		},
+
+		onReady() {
+			// 内容过多自动出滚动条
+			const res = uni.getSystemInfoSync();
+			const result = dom.getComponentRect(this.$refs.box, option => {
+				if (option.size.height > res.windowHeight) {
+					// 内容过多就给出滚动条
+					this.contentView.height = (res.windowHeight - 300) + 'px';
+				}
+			});
+			
+			// box动画
+			var box = this.$refs.box;
+			animation.transition(box, {
+				styles: {
+					opacity: 1,
+					transform: 'scale(1)'
+				},
+				duration: 100
+			});
+		},
+		
+		onBackPress(options) {
+			if (options.from === 'backbutton') {
+				// 安卓返回按键
+				this.close();
+				return true;
+			}
+		},
+		
+		onUnload() {
+			uni.$emit('_systemShowModalMessage', this.result);
+		},
+
+		methods: {
+			onClick(e) {
+				e.stopPropagation();
+			},
+
+			close() {
+				// 关闭modal
+				uni.navigateBack();
+				// 动画
+				var box = this.$refs.box;
+				animation.transition(box, {
+					styles: {
+						opacity: 0,
+						transform: 'scale(0.8)'
+					},
+					duration: 100
+				});
+			},
+
+			buttonClick(type) {
+				this.close();
+
+				if (type == 'cancel') {
+					// 点击取消
+					this.result = {
+						confirm: false,
+						cancel: true
+					}
+				} else {
+					// 点击确定
+					this.result = {
+						confirm: true,
+						cancel: false
+					}
+				}
+			}
+		},
+
+	}
+</script>
+
+<style scoped>
+	.mask {
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.box {
+		width: 320px;
+		background-color: #ffffff;
+		border-radius: 15rpx;
+		opacity: 0;
+		transform: scale(0.8);
+	}
+
+	.title {
+		margin-top: 40rpx;
+	}
+
+	.title-text {
+		color: #191919;
+		font-weight: bold;
+		font-size: 34rpx;
+		text-align: center;
+	}
+
+	.content {
+		padding: 50rpx;
+		height: 300rpx;
+	}
+
+	.content-rich-text,
+	.content-text {
+		text-align: center;
+		font-size: 34rpx;
+	}
+
+	.button {
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		border-top-style: solid;
+		border-top-width: 1px;
+		border-top-color: #f1f1f1;
+		justify-content: center;
+	}
+
+	.button-view {
+		flex: 1;
+		padding: 30rpx 0;
+	}
+
+	.button-view-text {
+		font-size: 33rpx;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.button-hover {
+		background-color: #f1f1f1;
+	}
+
+	.button-cancel {
+		border-bottom-left-radius: 15rpx;
+		border-right-style: solid;
+		border-right-width: 1px;
+		border-right-color: #f1f1f1;
+	}
+
+	.button-confirm {
+		border-bottom-right-radius: 15rpx;
+	}
+</style>

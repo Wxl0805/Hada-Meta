@@ -1,0 +1,87 @@
+.content {
+  // background-color: red;
+  // display: flex;
+  // flex-direction: column;
+  background-image: url("@/static/images/income/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 395rpx;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 4rpx;
+  .box1,
+  .box2,
+  .box3 {
+    color: #ffffff;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+    // background-color: #1890ff;
+    // 标题
+    text {
+      font-size: 28rpx;
+      font-family: PingFangSC-Medium, PingFang SC;
+    }
+    view {
+      display: flex;
+    }
+  }
+  .box1 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-left: 40rpx;
+    // 数字
+    view {
+      display: flex;
+      align-items: baseline;
+      font-size: 68rpx;
+      font-weight: 500;
+
+      font-family: AlibabaPuHuiTiB;
+      // 单位
+      p {
+        margin-left: 20rpx;
+        font-size: 28rpx;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .box2,
+  .box3 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40rpx;
+    // 数字
+    view {
+      display: flex;
+      align-items: baseline;
+
+      font-family: AlibabaPuHuiTiB;
+      font-size: 32rpx;
+      font-weight: 700;
+      // 单位
+      p {
+        margin-top: 10rpx;
+        font-family: PingFangSC-Medium, PingFang SC;
+        margin-left: 20rpx;
+        font-size: 28rpx;
+        font-weight: 500;
+      }
+    }
+  }
+  .box2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  .box3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+}

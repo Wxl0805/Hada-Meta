@@ -1,0 +1,70 @@
+.group_8 {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 11px;
+  width: 620rpx;
+  height: 425rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  z-index: 1001;
+}
+
+.group_9 {
+  width: 221rpx;
+  height: 57rpx;
+  margin: 84rpx 0 0 200rpx;
+}
+
+.block_3 {
+  width: 50rpx;
+  height: 50rpx;
+  background: url('@/static/images/withdrawmanage/success.png')
+    100% no-repeat;
+  background-size: 100% 100%;
+  margin-top: 4rpx;
+}
+
+.text_18 {
+  width: 163rpx;
+  height: 57rpx;
+  color: rgba(46, 51, 78, 1);
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 57rpx;
+}
+
+.text_19_1 {
+  width: 462rpx;
+  height: 38rpx;
+  color: rgba(158, 163, 187, 1);
+  font-size: 27rpx;
+  font-family: PingFangSC-Medium;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 38rpx;
+  margin: 12rpx 0 0 79rpx;
+}
+
+.button_1 {
+  background-color: rgba(0, 155, 249, 1);
+  border-radius: 96px;
+  height: 87rpx;
+  width: 558rpx;
+  margin: 93rpx 0 54rpx 31rpx;
+}
+
+.text_20 {
+  width: 62rpx;
+  height: 43rpx;
+  color: rgba(255, 255, 255, 1);
+  font-size: 31rpx;
+  font-family: AlibabaPuHuiTiM;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 43rpx;
+  margin: 22rpx 0 0 248rpx;
+}
